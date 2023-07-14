@@ -1,0 +1,111 @@
+.mynavbar-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #666;
+    z-index: 5;
+
+    .hamburger{
+        display: none;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #333;
+    }
+
+    .navbar-logo{
+        cursor: pointer;
+        padding-left: 3%;
+        width: 30%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        font-size: 22px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        justify-items: center;
+        transition: all 0.3s ease;
+    
+        .mynavbar-img-brand {
+            border: 1px solid white;
+            border-radius: 50px;
+            margin-right: 3%;
+            width: 30px;
+            height: 30px;
+        }
+
+    }
+
+    .navbar-logo:hover {
+        color: white;
+    }
+
+    .navbar-titles{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+
+        .mynavbar-links {
+            color: black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+    
+        .mynavbar-links:hover {
+            color: white;
+        }
+    }
+
+    
+}
+
+// Responsive
+@media only screen and (max-width: 650px) {
+    .mynavbar-container{
+        display: flex;
+
+        .navbar-logo{ 
+            width: 80%;
+            align-items: center;
+            justify-content: start;
+        }
+        .hamburger{
+            display: block;
+            width: 20%;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .navbar-titles{
+            display: none;
+            left:0px;
+            width: 100%;
+            background-color: #666;
+            position: fixed;
+            top: 14rem;
+            z-index: 0;
+            text-align: center;
+            flex-direction: column;
+            padding-top: 5px;
+            padding-bottom: 7px;
+            .mynavbar-links {
+                margin-top: 3px;
+                margin-bottom: 3px;
+            }
+
+        }
+        
+        .visible {
+            display: flex;
+        }
+    }
+    
+}
+
